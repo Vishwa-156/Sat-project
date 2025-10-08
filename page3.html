@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sector Cards</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #555;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  .card {
+    background: linear-gradient(to bottom, #eaf1ff, #f9fbff);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+
+  .icon {
+    background-color: white;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+  }
+
+  .card h3 {
+    margin: 10px 0 5px;
+    color: #222;
+  }
+
+  .card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+
+  .listed {
+    display: inline-block;
+    background: #e5f0ff;
+    color: #0066ff;
+    border-radius: 15px;
+    padding: 4px 12px;
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .stats {
+    font-size: 13px;
+    color: #333;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+  }
+
+  .btn:hover {
+    background-color: #004fcc;
+  }
+
+  .img-fluid{
+    width: 50px;
+    height: 50px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Sector</h1>
+<p>Go to your favourite sector and analyse it in detail.</p>
+
+<div class="container">
+  <div class="card">
+    <div class="icon">
+      <img src="https://d3po6s2ufk88fh.cloudfront.net/400x400/Ticker-Sector/d2606db197624da0ba946ab0b1bc77e4.png" class="img-fluid">
+    </div>
+    
+    <h3>Abrasives</h3>
+    <p>The one that scraps away all inconsistencies.</p>
+    <div class="listed">3 Listed Companies</div>
+    <div class="stats">
+      <!-- <img src="https://d3po6s2ufk88fh.cloudfront.net/400x400/Ticker-Sector/d2606db197624da0ba946ab0b1bc77e4.png" class="img-fluid"> -->
+      <div>MICRO<br>0</div>
+      <div>SMALL<br>1</div>
+      <div>MID<br>2</div>
+      <div>LARGE<br>0</div>
+    </div>
+    <button class="btn">Details</button>
+  </div>
+
+  <div class="card">
+    <div class="icon"><img src="https://d3po6s2ufk88fh.cloudfront.net/400x400/Ticker-Sector/16bf0cdf53924418820966869fcc4636.png" class="img-fluid"></div>
+    <h3>Advertising & Media</h3>
+    <p>The one that creates and distributes media content.</p>
+    <div class="listed">14 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>12</div>
+      <div>SMALL<br>2</div>
+      <div>MID<br>0</div>
+      <div>LARGE<br>0</div>
+    </div>
+     
+    <button class="btn">Details</button>
+  </div>
+
+  <div class="card">
+    <div class="icon" <img src="https://d3po6s2ufk88fh.cloudfront.net/400x400/Ticker-Sector/67f778306d8d40c5b178131582abffd9.png" class="img-fluid" alt="Agriculture"></div>
+    <h3>Agriculture</h3>
+    <p>The one that gives us vegetables and fruits to eat.</p>
+    <div class="listed">55 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>48</div>
+      <div>SMALL<br>5</div>
+      <div>MID<br>2</div>
+      <div>LARGE<br>0</div>
+    </div>
+     
+    <button class="btn">Details</button>
+
+    </div>
+
+      <div class="card">
+    <div class="icon">🌾</div>
+    <h3>Air Conditioners</h3>
+    <p>The one that's keeps it cool with no noise.</p>
+    <div class="listed">5 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>0</div>
+      <div>SMALL<br>1</div>
+      <div>MID<br>2</div>
+      <div>LARGE<br>2</div>
+    </div>
+     
+    <button class="btn">Details</button>
+</div>
+
+  <div class="card">
+    <div class="icon">🌾</div>
+    <h3>Airlines</h3>
+    <p>The one that takes us around the worls in the shortest time.</p>
+    <div class="listed">7 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>1</div>
+      <div>SMALL<br>4</div>
+      <div>MID<br>1</div>
+      <div>LARGE<br>1</div>
+    </div>
+     
+    <button class="btn">Details</button>
+  </div>
+
+    <div class="card">
+    <div class="icon">🌾</div>
+    <h3>Airpot Management Services</h3>
+    <p>The one that oversees it all in airports for your journey.</p>
+    <div class="listed">2 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>1</div>
+      <div>SMALL<br>0</div>
+      <div>MID<br>0</div>
+      <div>LARGE<br>1</div>
+    </div>
+     
+    <button class="btn">Details</button>
+    </div>
+
+
+        <div class="card">
+    <div class="icon">🌾</div>
+    <h3>Aluminium & Aluminium Products</h3>
+    <p>The one that can wrap almost everything.</p>
+    <div class="listed">20 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>17</div>
+      <div>SMALL<br>2</div>
+      <div>MID<br>0</div>
+      <div>LARGE<br>1</div>
+    </div>
+     
+    <button class="btn">Details</button>
+    </div>
+
+        <div class="card">
+    <div class="icon">🌾</div>
+    <h3>Amusement Parks/Recreation/Club</h3>
+    <p>The one that's all about the fun stuff and food.</p>
+    <div class="listed">5 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>2</div>
+      <div>SMALL<br>3</div>
+      <div>MID<br>0</div>
+      <div>LARGE<br>0</div>
+    </div>
+     
+    <button class="btn">Details</button>
+    </div>
+
+        <div class="card">
+    <div class="icon">🌾</div>
+    <h3>Animal Feed</h3>
+    <p>The one that's all about nutritious feeds for animals.</p>
+    <div class="listed">7 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>2</div>
+      <div>SMALL<br>3</div>
+      <div>MID<br>0</div>
+      <div>LARGE<br>0</div>
+    </div>
+     
+    <button class="btn">Details</button>
+    </div>
+
+        <div class="card">
+    <div class="icon"></div>
+    <h3>Aquaculture</h3>
+    <p>The one that takes care of aquatic animals.</p>
+    <div class="listed">8 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>7</div>
+      <div>SMALL<br>1</div>
+      <div>MID<br>0</div>
+      <div>LARGE<br>0</div>
+    </div>
+     
+    <button class="btn">Details</button>
+    </div>
+        <div class="card">
+    <div class="icon"></div>
+    <h3>Auto Ancillary</h3>
+    <p>The one that provides parts to keep our vehicles running .</p>
+    <div class="listed">106 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>44</div>
+      <div>SMALL<br>30</div>
+      <div>MID<br>20</div>
+      <div>LARGE<br>6</div>
+    </div>
+     
+    <button class="btn">Details</button>
+    </div>   
+     <div class="card">
+    <div class="icon"></div>
+    <h3>Automobile Two & Three Wheelers</h3>
+    <p>The one that suits couples and smaller groups.</p>
+    <div class="listed">11 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>4</div>
+      <div>SMALL<br>1</div>
+      <div>MID<br>2</div>
+      <div>LARGE<br>4</div>
+    </div>
+     
+    <button class="btn">Details</button>
+    </div> 
+
+     <div class="card">
+    <div class="icon"></div>
+    <h3>Automobiles - Dealers & Distributors</h3>
+    <p>The one that makes cars and buses available to public </p>
+    <div class="listed">8 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>1</div>
+      <div>SMALL<br>0</div>
+      <div>MID<br>0</div>
+      <div>LARGE<br>1</div>
+    </div>
+     
+    <button class="btn">Details</button>
+    </div>    
+    <div class="card">
+    <div class="icon"></div>
+    <h3>Automobiles - Passenger  Cars</h3>
+    <p>The one that lets families travel together comfortably.</p>
+    <div class="listed">2 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>1</div>
+      <div>SMALL<br>0</div>
+      <div>MID<br>0</div>
+      <div>LARGE<br>1</div>
+    </div>
+     
+    <button class="btn">Details</button>
+    </div>   
+     <div class="card">
+    <div class="icon"></div>
+    <h3>Airpot Management Services</h3>
+    <p>The one that oversees it all in airports for your journey.</p>
+    <div class="listed">2 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>1</div>
+      <div>SMALL<br>0</div>
+      <div>MID<br>0</div>
+      <div>LARGE<br>1</div>
+    </div>
+     
+    <button class="btn">Details</button>
+    </div>    
+    <div class="card">
+    <div class="icon"></div>
+    <h3>Airpot Management Services</h3>
+    <p>The one that oversees it all in airports for your journey.</p>
+    <div class="listed">2 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>1</div>
+      <div>SMALL<br>0</div>
+      <div>MID<br>0</div>
+      <div>LARGE<br>1</div>
+    </div>
+     
+    <button class="btn">Details</button>
+    </div>   
+     <div class="card">
+    <div class="icon">🌾</div>
+    <h3>Airpot Management Services</h3>
+    <p>The one that oversees it all in airports for your journey.</p>
+    <div class="listed">2 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>1</div>
+      <div>SMALL<br>0</div>
+      <div>MID<br>0</div>
+      <div>LARGE<br>1</div>
+    </div>
+     
+    <button class="btn">Details</button>
+    </div>    
+    <div class="card">
+    <div class="icon">🌾</div>
+    <h3>Airpot Management Services</h3>
+    <p>The one that oversees it all in airports for your journey.</p>
+    <div class="listed">2 Listed Companies</div>
+    <div class="stats">
+      <div>MICRO<br>1</div>
+      <div>SMALL<br>0</div>
+      <div>MID<br>0</div>
+      <div>LARGE<br>1</div>
+    </div>
+     
+    <button class="btn">Details</button>
+    </div>
+
+

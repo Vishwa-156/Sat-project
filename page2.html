@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticker Clone</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f9fbff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Top Index Bar */
+        .index-bar {
+            background: #f0f6ff;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 6px 0;
+            font-size: 14px;
+        }
+
+        .index-bar span {
+            font-weight: bold;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .red {
+            color: red;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 40px;
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0066ff;
+        }
+
+        .navbar .links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .navbar .account {
+            background: #e6f0ff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            display: inline-block;
+            background: #fff;
+            border-radius: 30px;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            width: 320px;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        /* Trending Section */
+        .trending {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .trending span {
+            background: #f0f4ff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin: 5px;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+            color: #0066ff;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Card */
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card h3 span {
+            font-size: 14px;
+            color: #0066ff;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th,
+        table td {
+            text-align: left;
+            padding: 10px 6px;
+            font-size: 14px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        table th {
+            color: #555;
+            font-weight: bold;
+        }
+
+        /* Status Colors */
+        .green {
+            color: green;
+            font-weight: bold;
+        }
+
+        .red {
+            color: red;
+            font-weight: bold;
+        }
+
+        .change {
+            background: #e6f9ee;
+            color: #0a8f3c;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Index Bar -->
+    <div class="index-bar">
+        <div>SENSEX <span class="green">81207.17 ▲ +223.86 (+0.28%)</span></div>
+        <div>NIFTY <span class="green">24894.25 ▲ +57.95 (+0.23%)</span></div>
+        <div>BANKNIFTY <span class="green">55589.25 ▲ +241.30 (+0.44%)</span></div>
+        <div>NIFTYIT <span class="green">33949.75 ▲ +44.55 (+0.13%)</span></div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">ticker <span style="font-size:12px; color:gray;">Beta</span></div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">Market</a>
+            <a href="#">IPO</a>
+            <a href="#">Screener</a>
+            <a href="#">Bundles</a>
+            <a href="#">Super Investors</a>
+            <a href="#">Sector</a>
+            <a href="#">Discover</a>
+            <a href="#" style="color:orange; font-weight:bold;">TickerPlus</a>
+        </div>
+        <div class="account">Account</div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Investing Ka Search Engine</h1>
+        <p>The Modern Stock Screener that helps you pick better stocks.</p>
+        <div class="search-box">
+            <input type="text" placeholder="Type a Company Name or Brand to Search">
+        </div>
+
+        <div class="trending">
+            <p>What's Trending:</p>
+            <span>ITC</span>
+            <span>RELIANCE</span>
+            <span>HDFCBANK</span>
+            <span>YESBANK</span>
+            <span>TATAMOTORS</span>
+        </div>
+    </div>
+
+    <div class="ad-banner">
+    <img src="https://assets.finology.in/ticker/images/mstock-home-mobile.jpg?v=1" alt="Ad Banner">
+  </div>
+
+    <div class="container">
+        <h2>Market Movers</h2>
+        <p>Learn about Stock market updates today - Peek into Gainers, Losers, 52 Week Highs, 52 week Lows and more.</p>
+
+        <div class="grid">
+            <!-- Left Card -->
+            <div class="card">
+                <h3>📅 52 Week High/Low <span>High | Low</span></h3>
+                <table>
+                    <tr>
+                        <th>COMPANY</th>
+                        <th>PRICE (Rs.)</th>
+                        <th>DAY HIGH (Rs.)</th>
+                    </tr>
+                    <tr>
+                        <td>Netweb Technologies</td>
+                        <td>4,311.90</td>
+                        <td>4,387.20</td>
+                    </tr>
+                    <tr>
+                        <td>Tata Steel</td>
+                        <td>173.21</td>
+                        <td>174.74</td>
+                    </tr>
+                    <tr>
+                        <td>TruAlt Bioenergy</td>
+                        <td>530.95</td>
+                        <td>549.00</td>
+                    </tr>
+                    <tr>
+                        <td>Tata Invest Corp</td>
+                        <td>10,014.75</td>
+                        <td>11,840.00</td>
+                    </tr>
+                    <tr>
+                        <td>Jain Resource Recycl</td>
+                        <td>304.58</td>
+                        <td>346.70</td>
+                    </tr>
+                    <tr>
+                        <td>Canara Bank</td>
+                        <td>125.90</td>
+                        <td>126.42</td>
+                    </tr>
+                    <tr>
+                        <td>Sandur Manganese</td>
+                        <td>194.40</td>
+                        <td>198.10</td>
+                    </tr>
+                    <tr>
+                        <td>John Cockerill India</td>
+                        <td>6,426.95</td>
+                        <td>6,599.95</td>
+                    </tr>
+                    <tr>
+                        <td>Avantel</td>
+                        <td>202.80</td>
+                        <td>211.65</td>
+
+                    </tr>
+                    <tr>
+                        <td>Prozone Realty</td>
+                        <td>66.08</td>
+                        <td>68.03</td>
+                    </tr>
+                    <tr>
+                        <td>TVS Electronics</td>
+                        <td>639.35</td>
+                        <td>680.00</td>
+                    </tr>
+                    <tr>
+                        <td>KIOCL</td>
+                        <td>528.65</td>
+                        <td>528.65</td>
+                    </tr>
+                    <tr>
+                        <td>Earkart</td>
+                        <td>142.25</td>
+                        <td>142.25</td>
+                    </tr>
+                    <tr>
+                        <td>Hindustan Copper</td>
+                        <td>338.10</td>
+                        <td>343.70</td>
+                    </tr>
+                    <tr>
+                        <td>Atlanta Electricals</td>
+                        <td>913.15</td>
+                        <td>927.40</td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <!-- Right Card -->
+            <div class="card">
+                <h3>📈 Today's Gainer / Loser <span>Gainer | Loser</span></h3>
+                <table>
+                    <tr>
+                        <th>COMPANY</th>
+                        <th>PRICE (Rs.)</th>
+                        <th>CHANGE %</th>
+                    </tr>
+                    <tr>
+                        <td>Shri Krishna Devcon</td>
+                        <td>43.89</td>
+                        <td><span class="change">+9.42%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Sarup Industries</td>
+                        <td>97.40</td>
+                        <td><span class="change">+9.05%</span></td>
+                    </tr>
+                    <tr>
+                        <td>MRPL</td>
+                        <td>143.40</td>
+                        <td><span class="change">+7.57%</span></td>
+                    </tr>
+                    <tr>
+                        <td>TruAlt Bioenergy</td>
+                        <td>530.95</td>
+                        <td><span class="change">+7.05%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Mehul Colours</td>
+                        <td>89.00</td>
+                        <td><span class="change">+6.84%</span></td>
+                    </tr>
+                    <tr>
+                        <td>MMTC</td>
+                        <td>69.63</td>
+                        <td><span class="change">+6.45%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Al Champdany</td>
+                        <td>57.80</td>
+                        <td><span class="change">+6.43%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Netweb Technologies</td>
+                        <td>4,311.90</td>
+                        <td><span class="change">+6.15%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Bloom Inds</td>
+                        <td>42.48</td>
+                        <td><span class="change">+5.02%</span></td>
+
+      <tr>
+        <td>PALM Jewels</td>
+        <td>24.99</td><td>
+            <span class="change">+5.00%</span></td>
+    </tr>
+          <tr>
+            <td>Sumuka Agro Inds.</td>
+            <td>240.00</td>
+            <td><span class="change">+4.76%</span></td>
+        </tr>
+          <tr>
+            <td>Ashima</td>
+            <td>23.77</td>
+            <td><span class="change">+4.39%</span></td>
+        </tr>
+          <tr>
+            <td>Remi Edelstahl Tub.</td>
+            <td>156.95</td><td><span class="change">+4.29%</span></td>
+        </tr>
+          <tr>
+            <td>Royal Cushion Vinyl</td>
+            <td>22.98</td>
+            <td><span class="change">+4.26%</span></td>
+        </tr>
+          <tr>
+            <td>Wallfort Finl. Serv</td>
+            <td>113.70</td>
+            <td><span class="change">+4.26%</span></td>
+          </tr>
+        </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
